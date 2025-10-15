@@ -1,5 +1,8 @@
 # Linux-IPC--Pipes
+Linux-IPC-Pipes
 
+
+# Ex03-Linux IPC - Pipes
 
 # AIM:
 To write a C program that illustrate communication between two process using unnamed and named pipes
@@ -21,7 +24,7 @@ Testing the C Program for the desired output.
 # PROGRAM:
 
 ## C Program that illustrate communication between two process using unnamed pipes using Linux API system calls
-```
+~~~
 #include<stdlib.h>
 #include<sys/types.h> 
 #include<sys/stat.h> 
@@ -76,12 +79,15 @@ n=read(rfd,buff,2000);
 buff[n]='\0';
 printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 }
-```
+~~~
+
 ## OUTPUT
-![368436572-bc22623e-085c-4ddb-a18d-d0f870a43aad](https://github.com/user-attachments/assets/40dd20bc-da36-4a1d-9766-45f07062b815)
+
+<img width="1036" height="322" alt="501028566-60896631-d3bd-4549-9b5d-cdd5f7a4c318" src="https://github.com/user-attachments/assets/9484f65b-29d7-49dc-a634-15cbce85a57a" />
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
-```
+
+~~~
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -92,10 +98,11 @@ int res = mkfifo("/tmp/my_fifo", 0777);
 if (res == 0) printf("FIFO created\n");
 exit(EXIT_SUCCESS);
 }
-```
+~~~
+
 ## OUTPUT
 
-![368436701-5f3b0f8d-afaf-4e88-97ae-fa9eccaec929](https://github.com/user-attachments/assets/337655e9-7d69-4488-af12-3f5d8653aa61)
+
 
 # RESULT:
 The program is executed successfully.
